@@ -4,10 +4,10 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { sizing } from '@material-ui/system';
 import Box from '@material-ui/core/Box';
-import { TodosContext } from './context/todos.context';
+import { DispatchContext } from './context/todos.context';
 
 function EditTodoForm({ id, task, toggleEditForm }) {
-	const { dispatch } = useContext(TodosContext);
+	const dispatch = useContext(DispatchContext);
 	const [ value, handleChange, reset ] = useInputState(task);
 	return (
 		<form
